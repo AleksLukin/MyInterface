@@ -11,8 +11,18 @@ namespace MyInterface
         protected bool takeTenders { get; set; }
         protected bool getSpecifications { get; set; }
         protected bool supply { get; set; }
+
+        public override void Create()
+        {
+            Console.WriteLine("КД для закупки сформирована!"); 
+        }
+        public override void Agree()
+        {
+            Console.WriteLine("КД для закупки согласована!");
+        }
         public void Tenders() //тендерные процедуры
         {
+            Create();
             Agree();
             if (!takeTenders)
             {
@@ -22,7 +32,6 @@ namespace MyInterface
             {
                 Console.WriteLine("Требуются повторные торги");
             }
-
         }
         public void Specifications() //подписание спецификаций
         {

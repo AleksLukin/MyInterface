@@ -13,6 +13,8 @@ namespace MyInterface
     {
         static void Main(string[] args)
         {
+            Documentation documentation = new();
+            documentation.Agree();
             Delivery delivery = new();
             delivery.DeliveryEquipment();
 

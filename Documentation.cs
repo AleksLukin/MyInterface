@@ -11,7 +11,7 @@ namespace MyInterface
         protected int createDocDay { get; set; } //срок разработки КД
         protected int checkDocDay { get; set; } //срок согласования КД
 
-        public void Create() //разработка КД
+        public virtual void Create() //разработка КД
         {
             createDocDay = 20;
             if (createDocDay == 20)
@@ -20,7 +20,7 @@ namespace MyInterface
             }
 
         }
-        public void Agree() //согласование КД
+        public virtual void Agree() //согласование КД
         {
             Create();
             Console.WriteLine("КД направлена на согласование");
